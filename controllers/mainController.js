@@ -4,7 +4,7 @@ const cheerio = require('cheerio');
 const url = 'https://xosoketqua.com/xsmb-xo-so-mien-bac.html';
 
 class MainController {
-   getAll = (req, res) => {
+   getAll = async (req, res) => {
       const numbers = [];
       const names = [];
       const times = [];
@@ -12,12 +12,12 @@ class MainController {
       const obj = {};
 
       try {
-         axios(url).then(response => {
+         await axios(url).then(response => {
             const html = response.data;
             const $ = cheerio.load(html); // sử dụng giống jQuery
 
-            $('table', html)
-               .first()
+            $('table:nth-child(1)', html)
+               // .first()
                .each(function () {
                   $(this)
                      .find('td > span.div-horizontal')
@@ -100,12 +100,19 @@ class MainController {
             //    });
             // }
             const nowDay = new Date();
-            // console.log(nowDay.getDate() + '/' + ((nowDay.getMonth() + 1) < 10 ?  ('0'+ (nowDay.getMonth() + 1)) : (nowDay.getMonth() + 1)) + '/' + nowDay.getFullYear());
+            const calendar =
+               nowDay.getDate() +
+               '/' +
+               (nowDay.getMonth() + 1 < 10
+                  ? '0' + (nowDay.getMonth() + 1)
+                  : nowDay.getMonth() + 1) +
+               '/' +
+               nowDay.getFullYear();
             // console.log(nowDay.getHours() + ':' + nowDay.getMinutes());
             // console.log(objTimesNames);
             res.status(200).json({
                countNumbers: numbers.length,
-               time: nowDay,
+               time: calendar,
                objTimesNames,
             });
          });
