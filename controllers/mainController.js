@@ -110,9 +110,12 @@ class MainController {
                nowDay.getFullYear();
             // console.log(nowDay.getHours() + ':' + nowDay.getMinutes());
             // console.log(objTimesNames);
+
+            const date = $('.class-title-list-link', html).first().find('a:last-child').text().split(' ')[1];
+
             res.status(200).json({
                countNumbers: numbers.length,
-               time: calendar,
+               time: date,
                objTimesNames,
             });
          });
