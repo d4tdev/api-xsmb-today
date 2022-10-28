@@ -36,7 +36,7 @@ class MainController {
                            if (names.includes(name)) {
                               return;
                            } else {
-                              names.push(name);
+                              names.push(name.split('.').join('_'));
                            }
                            // }
                         }
@@ -88,7 +88,7 @@ class MainController {
             //    .each(function () {
             //       const time = $(this).prop('innerHTML').split(' ')[1];
 
-            //       // times.push(time);
+            // times.push(time);
             //       console.log(time);
             //    });
 
@@ -111,7 +111,11 @@ class MainController {
             // console.log(nowDay.getHours() + ':' + nowDay.getMinutes());
             // console.log(objTimesNames);
 
-            const date = $('.class-title-list-link', html).first().find('a:last-child').text().split(' ')[1];
+            const date = $('.class-title-list-link', html)
+               .first()
+               .find('a:last-child')
+               .text()
+               .split(' ')[1];
 
             res.status(200).json({
                countNumbers: numbers.length,
