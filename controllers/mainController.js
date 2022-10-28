@@ -44,8 +44,8 @@ class MainController {
                });
             if (numbers.length > 0) {
                for (let i = 0; i < names.length; i++) {
-                  objTimesNames[names[0]] = numbers[0];
-                  objTimesNames[names[1]] = numbers[1];
+                  objTimesNames[names[0]] = [numbers[0]];
+                  objTimesNames[names[1]] = [numbers[1]];
                   objTimesNames[names[2]] = [numbers[2], numbers[3]];
                   objTimesNames[names[3]] = [
                      numbers[4],
@@ -82,6 +82,8 @@ class MainController {
                   ];
                }
             }
+
+
 
             // $('.list-link', html)
             //    .find('h2 > a:last-child')
