@@ -83,8 +83,6 @@ class MainController {
                }
             }
 
-
-
             // $('.list-link', html)
             //    .find('h2 > a:last-child')
             //    .each(function () {

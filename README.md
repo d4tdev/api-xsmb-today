@@ -1,6 +1,6 @@
 # api-xsmb-today
 
-> take infor from api by https://api-xsmb-today.herokuapp.com/v1
+> take info from api by https://api-xsmb.cleverapps.io/v1
 >
 > web-scraped from https://xosoketqua.com/xsmb-xo-so-mien-bac.html
 
