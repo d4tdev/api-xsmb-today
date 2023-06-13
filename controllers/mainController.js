@@ -31,7 +31,6 @@ class MainController {
                         .find('tr > td:first-child')
                         .each(function (i) {
                            const name = $(this).text();
-                           console.log(name);
 
                            if (!name.includes('Mã ĐB')) {
                               // for (let i = 0; i < names.length; i++) {
@@ -119,11 +118,11 @@ class MainController {
                // console.log(nowDay.getHours() + ':' + nowDay.getMinutes());
                // console.log(results);
 
-               const date = $('.class-title-list-link', html)
+               const date = $('div.tit-mien.clearfix.txt-center > div', html)
                   .first()
                   .find('a:last-child')
                   .text()
-                  .split(' ')[1];
+                  .split(' ')[2];
 
                res.status(200).json({
                   countNumbers: numbers.length,
