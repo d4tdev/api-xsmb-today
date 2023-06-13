@@ -38,7 +38,12 @@ class MainController {
                               if (names.includes(name)) {
                                  return;
                               } else {
-                                 names.push(name.split('.').join('_'));
+                                 names.push(
+                                    name
+                                       .replace('Giải', 'G')
+                                       .split(' ')
+                                       .join('')
+                                 );
                               }
                               // }
                            }
