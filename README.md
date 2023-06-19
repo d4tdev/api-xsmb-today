@@ -4,14 +4,14 @@
 
 ---
 
-| Keys | Type   |
-| ---- | ------ |
-| time | String |
-| ĐB | String |
-| G1  | String |
-| G2  | String |
-| G3  | String |
-| G4  | String |
-| G5  | String |
-| G6  | String |
-| G7  | String |
+| Keys | Type         |
+| ---- | ------------ |
+| time | Array String |
+| ĐB   | Array String |
+| G1   | Array String |
+| G2   | Array String |
+| G3   | Array String |
+| G4   | Array String |
+| G5   | Array String |
+| G6   | Array String |
+| G7   | Array String |
