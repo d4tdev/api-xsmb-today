@@ -1,8 +1,6 @@
 # api-xsmb-today
 
-> take info from api by https://api-xsmb-today.cyclic.app/api/v1
->
-> web-scraped from https://az24.vn/xsmb-sxmb-xo-so-mien-bac.html
+> take info from api by https://api-xsmb.cyclic.app/api/v1
 
 ---
 

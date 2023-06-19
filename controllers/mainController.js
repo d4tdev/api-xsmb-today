@@ -1,8 +1,9 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+require('dotenv').config();
 
-// const url = 'https://xosoketqua.com/xsmb-xo-so-mien-bac.html';
-const url = 'https://az24.vn/xsmb-sxmb-xo-so-mien-bac.html';
+
+const url = process.env.URL;
 
 class MainController {
    getAll = async (req, res) => {
