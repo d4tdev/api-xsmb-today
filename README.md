@@ -1,6 +1,6 @@
 # api-xsmb-today
 
-> take info from api by https://api-xsmb.cyclic.app/api/v1
+> take info from api by [https://api-xsmb.cyclic.app/api/v1](https://api-xsmb-today.onrender.com/api/v1)
 
 ---
 
